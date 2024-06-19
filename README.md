@@ -1,18 +1,18 @@
 # Anime List Scraper
 > [!IMPORTANT]
-> I haven't finished this program yet. Right now, program will only store titles and rankings
+> Program now can store the scores, it is functional now but still incomplete
 
 This is for you anime fans out there who want to binge-watch animes but don't know which one to go for.
 
 ## Description
 This program will go onto [MyAnimeList](https://myanimelist.net/topanime.php) and fetch the top 50 Animes that are currently trending.
 
-It'll generate a excel spreadsheet whihc you can open to see the details of these animes.
+It'll generate a excel spreadsheet which you can open to see the details of these animes.
 
 ## Details will be included:
 - Ranking (Completed)
 - Name (Completed)
-- Score (To be completed/TBC)
+- Score (completed)
 - Details (TBC)
 
 I'm also thinking of other stuff but Haven't been able to think of any.
