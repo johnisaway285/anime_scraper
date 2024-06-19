@@ -1,6 +1,11 @@
 import requests,os
 import openpyxl as excel
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 directory=os.getcwd()
 file_name="top_50.xlsx"
@@ -17,6 +22,7 @@ def main():
     soup=BeautifulSoup(raw_page.text,"html.parser")
     titles=soup.find_all("a",class_="hoverinfo_trigger")
     scores=soup.find_all("td",class_="score ac fs14")
+    link_to_synoposis=soup
     for score in scores:
         if score.text == "\n\n":
             scores.pop(scores.index(score))
@@ -37,6 +43,10 @@ def main():
 def create_empty():
     wb = excel.Workbook()
     wb.save(file_path)
+
+def get_synoposis(title:str):
+    driver=webdriver.Chrome()
+    driver.get("https://myanimelist.net/")
 
 if __name__=="__main__":
     main()
