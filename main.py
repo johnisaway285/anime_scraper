@@ -19,8 +19,8 @@ def main():
     titles=soup.find_all("a",class_="hoverinfo_trigger")
     scores=soup.find_all("td",class_="score ac fs14")
     genres=soup.find_all("div",class_="detail")
+    print(genres[0].text)
     
-    print(genres)
     '''
     for score in scores:
         if score.text == "\n\n":
