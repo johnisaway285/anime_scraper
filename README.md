@@ -1,6 +1,6 @@
 # Anime List Scraper
 > [!IMPORTANT]
-> Program now can store the scores, it is functional now but still incomplete
+> Program now can store the scores. I commented out parts of the code to test finding the genre
 
 This is for you anime fans out there who want to binge-watch animes but don't know which one to go for.
 
