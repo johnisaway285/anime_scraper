@@ -15,19 +15,27 @@ def main():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
     }
     raw_page=requests.get("https://myanimelist.net/topanime.php",headers=headers)
+
     soup=BeautifulSoup(raw_page.text,"html.parser")
     titles=soup.find_all("a",class_="hoverinfo_trigger")
     scores=soup.find_all("td",class_="score ac fs14")
-    genres=soup.find_all("div",class_="detail")
-    print(genres[0].text)
-    
-    '''
     for score in scores:
         if score.text == "\n\n":
             scores.pop(scores.index(score))
     for title in titles:
         if title.text == "\n\n":
             titles.pop(titles.index(title))
+    i=0
+    for a in soup.select("h3>a"):
+        if a.text != "More":
+            title=a.text
+            area_id=a.get("id").removeprefix("#area")
+            
+            
+    
+
+    '''
+    
     sheet["A1"].value="Ranking"
     sheet["B1"].value="Anime Name"
     sheet["C1"].value="Score"
