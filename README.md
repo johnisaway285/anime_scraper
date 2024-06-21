@@ -1,6 +1,6 @@
 # Anime List Scraper
 > [!IMPORTANT]
-> Program now can store the scores. I commented out parts of the code to test finding the genre
+> Program is now functional. For some animes, genres don't come through and therefore some animes' genres will be left empty
 
 This is for you anime fans out there who want to binge-watch animes but don't know which one to go for.
 
@@ -13,9 +13,9 @@ It'll generate a excel spreadsheet which you can open to see the details of thes
 - Ranking (Completed)
 - Name (Completed)
 - Score (completed)
-- Details (TBC)
+- Details/Synoposis (Completed)
+- Genre (90% complete)
 
-I'm also thinking of other stuff but Haven't been able to think of any.
 
 ## How to run this program?
  TL;DR:
@@ -42,4 +42,4 @@ Final step! Run this program and have fun!
 python3 main.py
 ```
 
-more to come
+Special thanks goes to Andrej Kesely([kiwwisk](https://github.com/kiwwisk)) for showing me how CSS selectors works!
