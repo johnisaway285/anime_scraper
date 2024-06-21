@@ -31,7 +31,6 @@ def main():
         url_fetch=url_description.format(id_num)
         raw_page_2=requests.get(url_fetch,headers=headers)
         soup_2=BeautifulSoup(raw_page_2.text,"html.parser")
-    
         score=soup_2.find("div",class_=re.compile(r"score-label")).text
         synoposis=soup_2.find("p",attrs={"itemprop":"description"}).text
         genre_str=""
