@@ -29,10 +29,10 @@ It'll generate a excel spreadsheet which you can open to see the details of thes
 > [!IMPORTANT]
 > Make sure you install the modules in the requirements.txt before you execute any of the commands below. Otherwise the program won't work if you lack any of the modules.
 > A helpful command would be:
-```
-pip3 install -r requirements.txt
-```
-to get all the prerequsite modules all at once.
+> ```
+> pip3 install -r requirements.txt
+> ```
+> to get all the prerequsite modules all at once.
 
 If you know how to download otherwise, knock yourself out! For the sake of convenience, here is the command:
 ```
