@@ -32,7 +32,7 @@ It'll generate a excel spreadsheet which you can open to see the details of thes
 > ```
 > pip3 install -r requirements.txt
 > ```
-> to get all the prerequsite modules all at once.
+> to get all the prerequsite modules installed all at once.
 
 If you know how to download otherwise, knock yourself out! For the sake of convenience, here is the command:
 ```
@@ -48,5 +48,5 @@ Final step! Run this program and have fun!
 ```
 python3 main.py
 ```
-
+## Acknowledgement
 Special thanks goes to Andrej Kesely([kiwwisk](https://github.com/kiwwisk)) for showing me how CSS selectors works!
