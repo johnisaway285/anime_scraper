@@ -1,6 +1,4 @@
 # Anime List Scraper
-> [!IMPORTANT]
-> Program is now functional. For some animes, genres don't come through and therefore some animes' genres will be left empty
 
 This is for you anime fans out there who want to binge-watch animes but don't know which one to go for.
 
@@ -12,9 +10,9 @@ It'll generate a excel spreadsheet which you can open to see the details of thes
 ## Details will be included:
 - Ranking (Completed)
 - Name (Completed)
-- Score (completed)
+- Score (Completed)
 - Details/Synoposis (Completed)
-- Genre (90% complete)
+- Genre (Completed)
 
 
 ## How to run this program?
