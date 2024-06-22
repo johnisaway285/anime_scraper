@@ -34,8 +34,12 @@ def main():
         score=soup_2.find("div",class_=re.compile(r"score-label")).text
         synoposis=soup_2.find("p",attrs={"itemprop":"description"}).text
         genre_str=""
-        for genre in soup_2.select("div:-soup-contains('Genres:')>span[itemprop='genre']"):
-            genre_str+=genre.text+","
+        if soup_2.select("div:-soup-contains('Genres:')>span[itemprop='genre']")==[]:
+            for genre in soup_2.select("div:-soup-contains('Genre:')>span[itemprop='genre']"):
+                genre_str+=genre.text+","
+        else:
+            for genre in soup_2.select("div:-soup-contains('Genres:')>span[itemprop='genre']"):
+                genre_str+=genre.text+","
         genre_str=genre_str[:-1]
         sheet[f"A{i+2}"].value=i+1
         sheet[f"B{i+2}"].value=title
