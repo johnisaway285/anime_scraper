@@ -1,5 +1,6 @@
 import requests,os,re
 import openpyxl as excel
+from tqdm import tqdm
 from bs4 import BeautifulSoup
 
 
@@ -26,12 +27,12 @@ def main():
     sheet["A1"].value="Ranking"
     sheet["B1"].value="Anime Name"
     sheet["C1"].value="Score"
-    sheet["D1"].value="Genres" 
+    sheet["D1"].value="Genres"
     sheet["E1"].value="Synopsis"
     i=0
     #Special thanks for Andrej Kesely for the css selector tutorial
     #Choose the h3 tags with an id attribute(i.e. the animes)
-    for a in soup.select("h3>a[id]"):
+    for a in tqdm(soup.select("h3>a[id]")):
         title=a.text
         id_num=a["id"].removeprefix("#area").strip()
         url_fetch=url_description.format(id_num)
@@ -59,7 +60,7 @@ def main():
     book.save(file_path)
     #Let users know it's done
     print("Top 50 anime saved to top_50.xlsx")
-        
+
 def create_empty():
     '''
     Create an empty excel file

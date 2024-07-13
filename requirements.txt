@@ -1,3 +1,4 @@
 requests
 openpyxl
 bs4
+tqdm
