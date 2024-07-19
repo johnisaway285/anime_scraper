@@ -3,7 +3,6 @@ import openpyxl as excel
 from tqdm import tqdm
 from bs4 import BeautifulSoup
 
-
 directory=os.getcwd()
 file_name="top_50.xlsx"
 file_path=os.path.join(directory,file_name)
