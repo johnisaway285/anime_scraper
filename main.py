@@ -43,14 +43,6 @@ def main():
         # For some reasons, some animes have the genre tag as "Genre" and some as "Genres", therefore I included both cases
         genres = soup_2.select("div:-soup-contains('Genres:')>span[itemprop='genre']") or soup_2.select("div:-soup-contains('Genre:')>span[itemprop='genre']")
         genre_str = ",".join(genre.text for genre in genres)
-        '''
-        if soup_2.select("div:-soup-contains('Genres:')>span[itemprop='genre']")==[]:
-            for genre in soup_2.select("div:-soup-contains('Genre:')>span[itemprop='genre']"):
-                genre_str+=genre.text+","
-        else:
-            for genre in soup_2.select("div:-soup-contains('Genres:')>span[itemprop='genre']"):
-                genre_str+=genre.text+","
-        '''
         #Remove the last comma
         sheet[f"A{i+2}"].value=i+1
         sheet[f"B{i+2}"].value=title
